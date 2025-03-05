@@ -6,6 +6,9 @@
 // It handles 404 errors by sending a 404 response
 // It listens on the specified port and logs a message to the console
 // cookie-parser is used to parse cookies from the request
+// cors is used to enable CORS for the server
+// corsOptions is used to specify the allowed origins for CORS
+// errorHandler is used to handle errors and log them to a file
 
 const express = require('express');
 const app = express();
@@ -13,11 +16,14 @@ const path = require('path');
 const { logger } = require('./middleware/logger')
 const errorHandler = require('./middleware/errorHandler')
 const cookieParser = require('cookie-parser')
+const cors = require('cors')
+const corsOptions = require('./config/corsOptions')
 const PORT = process.env.PORT || 3500;
-
 
 //logger middleware to log request method, request url, and a timestamp
 app.use(logger)
+
+app.use(cors(corsOptions))
 
 app.use(express.json())
 
