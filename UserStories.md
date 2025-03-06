@@ -20,3 +20,6 @@
 18. [ ] Seuls les responsables et les administrateurs peuvent accéder aux paramètres utilisateur
 19. [ ] Seuls les responsables et les administrateurs peuvent créer de nouveaux utilisateurs
 20. [ ] Le mode bureau est le plus important, mais devrait être disponible sur mobile
+DB uder name : ensa
+passe word  : 0099@ensa
+mongodb+srv://ensa:<db_password>@cluster0.lqnfa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
