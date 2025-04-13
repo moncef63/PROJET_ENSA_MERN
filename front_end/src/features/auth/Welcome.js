@@ -14,7 +14,11 @@ const Welcome = () => {
 
             <p><Link to="/dash/notes">Notes techniques</Link></p>
 
+            <p><Link to="/dash/notes/new">Ajouter Notes techniques</Link></p>
+
             <p><Link to="/dash/users">Paramètres Utilisateur</Link></p>
+
+            <p><Link to="/dash/users/new">Ajouter Utilisateur</Link></p>
 
         </section>
     )

@@ -1,9 +1,9 @@
 # Histoires d'utilisateurs pour techNotes
 
 1. [ ] Remplacer le système actuel de pense-bêtes
-2. [ ] Ajouter une page publique avec des informations de contact de base
+2. [x] Ajouter une page publique avec des informations de contact de base
 3. [ ] Ajouter une connexion d'employé à l'application Notes
-4. [ ] Fournir une page d'accueil après la connexion
+4. [x] Fournir une page d'accueil après la connexion
 5. [ ] Fournir une navigation facile
 6. [ ] Afficher l'utilisateur actuel et le rôle attribué
 7. [ ] Fournir une option de déconnexion
