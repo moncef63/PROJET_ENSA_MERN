@@ -23,6 +23,3 @@
 DB uder name : ensa
 passe word  : 0099@ensa
 mongodb+srv://ensa:<db_password>@cluster0.lqnfa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-
-
-
