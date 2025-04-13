@@ -9,10 +9,10 @@
 7. [ ] Fournir une option de déconnexion
 8. [ ] Exiger que les utilisateurs se connectent au moins une fois par semaine
 9. [ ] Fournir un moyen de supprimer l'accès des employés dès que possible si nécessaire
-10. [ ] Les notes sont attribuées à des employés spécifiques
-11. [ ] Les notes ont un numéro de ticket, un titre, un corps de note, des dates de création et de mise à jour
-12. [ ] Les notes sont OUVERTES ou TERMINÉES
-13. [ ] Les utilisateurs peuvent être des employés, des gestionnaires ou des administrateurs
+10. [x] Les notes sont attribuées à des employés spécifiques
+11. [x] Les notes ont un numéro de ticket, un titre, un corps de note, des dates de création et de mise à jour
+12. [x] Les notes sont OUVERTES ou TERMINÉES
+13. [x] Les utilisateurs peuvent être des employés, des gestionnaires ou des administrateurs
 14. [ ] Les notes ne peuvent être supprimées que par les gestionnaires ou les administrateurs
 15. [ ] N'importe qui peut créer une note (lorsque le client s'enregistre)
 16. [ ] Les employés ne peuvent afficher et modifier que les notes qui leur sont attribuées
