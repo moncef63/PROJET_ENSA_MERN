@@ -84,7 +84,7 @@ const NewUserForm = () => {
 
             <form className="form" onSubmit={onSaveUserClicked}>
                 <div className="form__title-row">
-                    <h2>nouveau utilisateur</h2>
+                    <h2>Nouveau utilisateur</h2>
                     <div className="form__action-buttons">
                         <button
                             className="icon-button"

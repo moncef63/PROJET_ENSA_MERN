@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
+import useAuth from '../../hooks/useAuth'
 
 const Welcome = () => {
+
+    const { username, isManager, isAdmin } = useAuth()
 
     const date = new Date()
     const today = new Intl.DateTimeFormat('fr-MA', { dateStyle: 'full', timeStyle: 'long' }).format(date)
@@ -10,15 +13,15 @@ const Welcome = () => {
 
             <p>{today}</p>
 
-            <h1>Bienvenu!</h1>
+            <h1>Bienvenue {username}!</h1>
 
-            <p><Link to="/dash/notes">Notes techniques</Link></p>
+            <p><Link to="/dash/notes">Notes technique</Link></p>
 
-            <p><Link to="/dash/notes/new">Ajouter Notes techniques</Link></p>
+            <p><Link to="/dash/notes/new">ajouter Notes technique</Link></p>
 
-            <p><Link to="/dash/users">Paramètres Utilisateur</Link></p>
+            {(isManager || isAdmin) && <p><Link to="/dash/users">utilisateur</Link></p>}
 
-            <p><Link to="/dash/users/new">Ajouter Utilisateur</Link></p>
+            {(isManager || isAdmin) && <p><Link to="/dash/users/new">Ajouter utilisateur</Link></p>}
 
         </section>
     )

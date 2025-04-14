@@ -5,12 +5,15 @@ import { useDispatch } from 'react-redux'
 import { setCredentials } from './authSlice'
 import { useLoginMutation } from './authApiSlice'
 
+import usePersist from '../../hooks/usePersist'
+
 const Login = () => {
     const userRef = useRef()
     const errRef = useRef()
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [errMsg, setErrMsg] = useState('')
+    const [persist, setPersist] = usePersist()
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -50,21 +53,22 @@ const Login = () => {
 
     const handleUserInput = (e) => setUsername(e.target.value)
     const handlePwdInput = (e) => setPassword(e.target.value)
+    const handleToggle = () => setPersist(prev => !prev)
 
     const errClass = errMsg ? "errmsg" : "offscreen"
 
-    if (isLoading) return <p>Chargement...</p>
+    if (isLoading) return <p>Loading...</p>
 
     const content = (
         <section className="public">
             <header>
-                <h1>Connexion </h1>
+                <h1>Connexion</h1>
             </header>
             <main className="login">
                 <p ref={errRef} className={errClass} aria-live="assertive">{errMsg}</p>
 
                 <form className="form" onSubmit={handleSubmit}>
-                    <label htmlFor="username">Nom d'utilisateur:</label>
+                    <label htmlFor="username">utilisateur:</label>
                     <input
                         className="form__input"
                         type="text"
@@ -85,7 +89,19 @@ const Login = () => {
                         value={password}
                         required
                     />
-                    <button className="form__submit-button">Se connecter</button>
+                    <button className="form__submit-button">Connexion</button>
+
+
+                    <label htmlFor="persist" className="form__persist">
+                        <input
+                            type="checkbox"
+                            className="form__checkbox"
+                            id="persist"
+                            onChange={handleToggle}
+                            checked={persist}
+                        />
+                        reste connecter
+                    </label>
                 </form>
             </main>
             <footer>
